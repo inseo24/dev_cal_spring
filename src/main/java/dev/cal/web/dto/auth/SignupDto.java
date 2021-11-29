@@ -1,6 +1,5 @@
 package dev.cal.web.dto.auth;
 
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -29,13 +28,9 @@ public class SignupDto {
 	@NotBlank(message="이메일이 공백입니다.")
 	private String email;
 	
+	private String id;
 	
-	public Member toEntity() {
-		return Member.builder()
-				.name(name)
-				.password(password)
-				.mobileNum(mobileNum)
-				.email(email)
-				.build();
-	}
+	private String token;
+
+
 }
